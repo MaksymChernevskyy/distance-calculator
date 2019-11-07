@@ -75,7 +75,7 @@ public class UserResource {
   }
 
   private ResponseEntity<String> getResponseForNoAccess(String message) {
-    return new ResponseEntity<>(message, HttpStatus.OK);
+    return new ResponseEntity<>(message, HttpStatus.UNAUTHORIZED);
   }
 
   private ResponseEntity<List<User>> getResponseForSuccess(List<User> users) {

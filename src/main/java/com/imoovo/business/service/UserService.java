@@ -1,11 +1,7 @@
 package com.imoovo.business.service;
 
-import com.imoovo.business.database.CalculationHistoryDatabase;
 import com.imoovo.business.database.InMemoryUserDatabase;
 import com.imoovo.business.entity.User;
-import com.imoovo.business.usecases.CalculateDistanceUseCase;
-import com.imoovo.business.usecases.FindDistanceByIdUseCase;
-import com.imoovo.business.usecases.GetAllCalculatedDistancesUseCase;
 import com.imoovo.business.usecases.GetAllUseCase;
 import com.imoovo.business.usecases.GetByIdUseCase;
 import com.imoovo.business.usecases.SaveUserUseCase;

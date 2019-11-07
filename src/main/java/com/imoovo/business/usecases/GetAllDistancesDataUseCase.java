@@ -6,10 +6,10 @@ import java.util.List;
 import org.springframework.stereotype.Component;
 
 @Component
-public class GetAllCalculatedDistancesUseCase {
+public class GetAllDistancesDataUseCase {
   private CalculationHistoryDatabase calculationHistoryDatabase;
 
-  public GetAllCalculatedDistancesUseCase withCalculationHistoryDatabase(CalculationHistoryDatabase calculationHistoryDatabase) {
+  public GetAllDistancesDataUseCase withCalculationHistoryDatabase(CalculationHistoryDatabase calculationHistoryDatabase) {
     this.calculationHistoryDatabase = calculationHistoryDatabase;
     return this;
   }

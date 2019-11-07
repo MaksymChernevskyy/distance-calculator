@@ -4,7 +4,7 @@ import com.imoovo.business.database.CalculationHistoryDatabase;
 import com.imoovo.business.entity.Distance;
 import com.imoovo.business.usecases.CalculateDistanceUseCase;
 import com.imoovo.business.usecases.FindDistanceByIdUseCase;
-import com.imoovo.business.usecases.GetAllCalculatedDistancesUseCase;
+import com.imoovo.business.usecases.GetAllDistancesDataUseCase;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -14,17 +14,17 @@ public class DistanceService {
   private CalculationHistoryDatabase calculationHistoryDatabase;
   private CalculateDistanceUseCase calculateDistanceUseCase;
   private FindDistanceByIdUseCase findDistanceByIdUseCase;
-  private GetAllCalculatedDistancesUseCase getAllCalculatedDistancesUseCase;
+  private GetAllDistancesDataUseCase getAllDistancesDataUseCase;
 
   @Autowired
   public DistanceService(CalculationHistoryDatabase calculationHistoryDatabase,
                          CalculateDistanceUseCase calculateDistanceUseCase,
                          FindDistanceByIdUseCase findDistanceByIdUseCase,
-                         GetAllCalculatedDistancesUseCase getAllCalculatedDistancesUseCase) {
+                         GetAllDistancesDataUseCase getAllDistancesDataUseCase) {
     this.calculationHistoryDatabase = calculationHistoryDatabase;
     this.calculateDistanceUseCase = calculateDistanceUseCase;
     this.findDistanceByIdUseCase = findDistanceByIdUseCase;
-    this.getAllCalculatedDistancesUseCase = getAllCalculatedDistancesUseCase;
+    this.getAllDistancesDataUseCase = getAllDistancesDataUseCase;
   }
 
   public Double calculate(Distance distance) {
@@ -48,7 +48,7 @@ public class DistanceService {
   }
 
   public List<Distance> getAllDistances() {
-    return getAllCalculatedDistancesUseCase
+    return getAllDistancesDataUseCase
         .withCalculationHistoryDatabase(calculationHistoryDatabase)
         .run();
   }
