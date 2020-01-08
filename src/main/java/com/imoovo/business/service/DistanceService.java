@@ -28,8 +28,8 @@ public class DistanceService {
   }
 
   public Double calculate(Distance distance) {
-    double calculation = org.apache.lucene.util.SloppyMath.haversinMeters(distance.getLatitudePoint1(), distance.getLongitudePoint1(),
-        (distance.getLatitudePoint1()), distance.getLongitudePoint2());
+    double calculation = org.apache.lucene.util.SloppyMath.haversinMeters(distance.getLatLong1().getLatitudePoint(), distance.getLatLong1().getLongitudePoint(),
+                                                                          distance.getLatLong2().getLatitudePoint(), distance.getLatLong2().getLatitudePoint());
     return calculation / 1000;
   }
 
