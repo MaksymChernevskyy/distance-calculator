@@ -2,12 +2,13 @@ package com.imoovo.business.entity;
 
 import java.time.LocalDateTime;
 
+
 public class Distance {
-  private Long id;
-  private LatLong latLong1;
-  private LatLong latLong2;
-  private User user;
-  private LocalDateTime date;
+    private Long id;
+    private LatLong latLong1;
+    private LatLong latLong2;
+    private User user;
+    private LocalDateTime date;
 
     public Long getId() {
         return id;
@@ -57,7 +58,7 @@ public class Distance {
                 ", latLong2=" + latLong2 +
                 ", user=" + user +
                 ", date=" + date +
-                '}' ;
+                '}';
     }
 }
 
